@@ -19,14 +19,14 @@ function generate(){
   }
 
   if(guessNumber > randomNum){
-    checkAnswer.textContent = `tahminin doğru sayıdan büyük!`
-    guessCount.textContent = `${guesses}`
+    checkAnswer.textContent = `tahminin doğru sayidan büyük!`
     guesses--;
+    guessCount.textContent = `Hak Sayisi: ${guesses}`
   }
   else if(guessNumber < randomNum){
-    checkAnswer.textContent = `tahminin doğru sayıdan kücük!`
-    guessCount.textContent = `${guesses}`
+    checkAnswer.textContent = `tahminin doğru sayidan kücük!`
     guesses--;
+    guessCount.textContent = `Hak Sayisi: ${guesses}`
   }
   else if(guessNumber === randomNum){
     checkAnswer.textContent = `Doğru Bildin! Doğru sayi: ${randomNum}`
@@ -36,13 +36,10 @@ function generate(){
     return;
   }
 
-  
-  guessCount.textContent = `${guesses}`;
-
   if(guesses === 0){
     checkAnswer.textContent = `Hakkiniz Bitti! Doğru Sayi: ${randomNum} Oyun Yeniden Baslatiliyor`;
     setTimeout(resetGame, 2000);
-    guessCount.textContent = `${guesses}`
+    guessCount.textContent = `Hak Sayisi: ${guesses}`
     guessButton.disabled = true;
     inputField.disabled = true;
     

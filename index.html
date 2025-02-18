@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Guessing Game</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <body class="h-screen flex justify-center items-center">
-    <div class="justify-center items-center box-border text-center">
-      
-      <div><p class="text-2xl ">1 ile 100 arasi sayi gir.</p></div>
-      <input class="border-2 rounded-2xl" type="number" id="guessNumber">
-      <button class="border-2 rounded-2xl" onclick="generate()">Tahmin Et!</button>
-      <p id="checkAnswer"></p>
-      <p id="guessCount"></p>
-
+  <body class="h-screen flex justify-center items-center bg-gray-100">
+    <div class="flex flex-col items-center gap-4 p-6 rounded-lg shadow-lg bg-blue-200">
+      <p class="text-2xl">1 ile 100 arası sayı gir.</p>
+      <input class="border-2 rounded-2xl p-2" type="number" id="guessNumber">
+      <button class="border-2 rounded-2xl p-2 bg-blue-500 text-white hover:bg-blue-700 transition" onclick="generate()">
+        Tahmin Et!
+      </button>
+      <p id="checkAnswer" class="text-lg font-semibold"></p>
+      <p id="guessCount" class="text-lg font-semibold"></p>
     </div>
     <script src="index.js"></script>
   </body>
